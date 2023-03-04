@@ -10,11 +10,12 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <!-- Fontawesome-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" type="text/css" href="./style.css">
 
       <title>PROJECT-Materialize-CSS-website</title>
     </head>
 
-    <body>
+    <body id="home" class="scrollspy">
       <!-- Navbar -->
 
       <div class="navbar-fixed">
@@ -91,6 +92,23 @@
         </ul>
       </section>
 
+      <!-- Section: Search -->
+      <section id="search" class="section section-search teal darken-1 white-text center scrollspy">
+        <div class="container">
+          <div class="row">
+            <div class="col s12">
+              <h3>Search Destinations</h3>
+              <div class="input-field">
+                <input type="text" class="white grey-text autocomplete" id="autocomplete-input"
+                placeholder="Aruba, Cancun, etc...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  
+
 
 
 
@@ -116,6 +134,21 @@
           height: 500,
           transition: 500,
           interval: 6000
+        });
+
+        // Autocomplete
+        const ac = document.querySelector
+        ('.autocomplete');
+        M.Autocomplete.init(ac, {
+          data: {
+            "Aruba": null,
+            "Cancun Mexico": null,
+            "Hawaii": null,
+            "Florida": null,
+            "California": null,
+            "Jamaica": null,
+            "Europe": null,
+          }
         });
 
       </script>
